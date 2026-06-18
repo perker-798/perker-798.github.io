@@ -1,0 +1,30 @@
+<DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        BMI計算(未完成)
+    </title>
+    <script>
+        function BMIcalculater() {
+        let a = document.getElementById("taijuu").value;
+        let b = document.getElementById("sintyou").value;
+        document.getElementById("keisankekka").value = a/b*b;
+        if (a+b < 18.5) {
+            document.getElementById("yabasa").textContent = "飯食え";
+        } else if (a+b >= 25) {
+            document.getElementById("yabasa").textContent = "ダイエットがんば";
+        } else {
+            document.getElementById("yabasa").textContent = "普通";
+        }
+        }
+    </script>
+</head>
+<body>
+    体重:<input id="taijuu" value="55">
+    身長:<input id="sintyou" value="1.8">
+    やばさ:<p id="yabasa"></p> 
+    計算結果:<p id="keisankekka"></p>
+    <button onclick="BMIcalculater()">check</button> 
+</body>
+</html>
